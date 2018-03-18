@@ -6,6 +6,8 @@ import logging
 
 from secrets1 import consumer_key, consumer_secret, access_token, access_token_secret
 
+__version__ = '0.1'
+
 def main(): 
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
@@ -65,7 +67,7 @@ def main():
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description=
-        "twiangulate",
+        ">>\"dadme 3 puntos de apoyo y encontraré a cualquiera\" - herramienta para twitter, versión %s by @jartigag" % __version__,
         usage='%(prog)s <user1> <user2> <user3>')
     parser.add_argument('user1', help='target1 user')
     parser.add_argument('user2', help='target2 user')
